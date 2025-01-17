@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial Sign-Up</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        🎥 NooK BoX 🎥
+    </header>
+
+    <!-- Free Trial Form Section -->
+    <section class="free-trial-form">
+        <div class="form-container">
+            <h1>Start Your Free Trial</h1>
+            <p>Join now and get 7 days of unlimited streaming for free!</p>
+
+            <form id="trialForm" aria-labelledby="form-title">
+                <!-- Name Field -->
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" aria-required="true">
+
+                <!-- Email Field -->
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" aria-required="true">
+
+                <!-- Password Field -->
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" aria-required="true">
+
+                <!-- Payment Options -->
+                <label for="payment">Select Payment Option</label>
+                <select id="payment" name="payment" aria-required="true">
+                    <option value="credit">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="upi">UPI</option>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="submit" class="cta-button">Start Free Trial</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 NooK BoX. All rights reserved.</p>
+    </footer>
+
+    <script src="3.js"></script>
+</body>
+</html>

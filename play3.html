@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-style Movie Page</title>
+    <link rel="stylesheet" href="play.css">
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <header class="navbar">
+        <h1><JUSTICE-LEAGUE</JUSTICE-LEAGUE>JUSTICE-LEAGUE</h1>
+    </header>
+
+    <main class="container">
+        <div class="movie-details">
+            <h2>JUSTICE LEAGUE</h2>
+            <p>Justice League is a superhero film based on the iconic DC Comics team, directed by Zack Snyder and released in 2017 (with Snyder's extended Justice League: Snyder Cut following in 2021). It unites some of DC's most powerful heroes to combat a global threat.
+
+                The story begins after Superman’s death (Batman v Superman), leaving Earth vulnerable. Bruce Wayne (Batman) and Diana Prince (Wonder Woman) assemble a team of superheroes, including Barry Allen (The Flash), Arthur Curry (Aquaman), and Victor Stone (Cyborg), to battle Steppenwolf, a general sent by the cosmic tyrant Darkseid to retrieve the powerful Mother Boxes.</p>
+            <p><strong>Genre:</strong> Action, Crime, Drama</p>
+            <p><strong>Duration:</strong> 2h 32min</p>
+            <p><strong>Rating:</strong> 9.0/10</p>
+        </div>
+
+        <div class="movie-player">
+            <video id="videoPlayer" controls>
+                <source src="justice-league-hindi-trailer-1080-publer.io.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="controls">
+                <button id="playPause"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                  </svg></button>
+                <button id="rewind"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-rewind-circle" viewBox="0 0 16 16">
+                    <path d="M7.729 5.055a.5.5 0 0 0-.52.038l-3.5 2.5a.5.5 0 0 0 0 .814l3.5 2.5A.5.5 0 0 0 8 10.5V8.614l3.21 2.293A.5.5 0 0 0 12 10.5v-5a.5.5 0 0 0-.79-.407L8 7.386V5.5a.5.5 0 0 0-.271-.445"/>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+                  </svg></button>
+                <button id="forward"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-fast-forward-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M4.271 5.055a.5.5 0 0 1 .52.038L8 7.386V5.5a.5.5 0 0 1 .79-.407l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 8 10.5V8.614l-3.21 2.293A.5.5 0 0 1 4 10.5v-5a.5.5 0 0 1 .271-.445"/>
+                  </svg></button>
+                <button id="fullscreen"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                  </svg></button>
+            </div>
+            <!-- Quality Buttons -->
+        <div class="quality-options">
+            <button onclick="setQuality('videos/my-video-480p.mp4', '480p')">480p</button>
+            <button onclick="setQuality('videos/my-video-720p.mp4', '720p')">720p</button>
+            <button onclick="setQuality('videos/my-video-1080p.mp4', '1080p')">1080p</button>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Movie Stream. All rights reserved.</p>
+    </footer>
+
+    <script src="play.js"></script>
+</body>
+</html>

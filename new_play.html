@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Quality Options</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .video-container {
+            text-align: center;
+            padding: 20px;
+        }
+video {
+    max-width: 100%; /* Ensures the video adapts to the screen size */
+    width: 80%; /* Sets the initial size of the video to 80% of the container */
+    height: auto; /* Maintains the aspect ratio of the video */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+        .video-details {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .video-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            margin-top: 20px;
+        }
+
+        .icons a {
+            color: #007bff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .icons a:hover {
+            color: #0056b3;
+        }
+
+        .quality-options {
+            margin-top: 15px;
+        }
+
+        .quality-options button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0 5px;
+        }
+
+        .quality-options button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <div class="video-container">
+        <video id="videoPlayer" controls>
+            <source src="video.mp4" type="video/mp4" data-quality="720p">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-details">
+            <div class="video-name">My Awesome Video</div>
+            <div class="video-description">This is a description of the video. It talks about the content, purpose, and any other details you'd like to share.</div>
+        </div>
+
+        <!-- Quality Buttons -->
+        <div class="quality-options">
+            <button onclick="setQuality('videos/my-video-480p.mp4', '480p')">480p</button>
+            <button onclick="setQuality('videos/my-video-720p.mp4', '720p')">720p</button>
+            <button onclick="setQuality('videos/my-video-1080p.mp4', '1080p')">1080p</button>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons">
+            <a href="#" onclick="shareVideo()" title="Share">
+                <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" onclick="addToFavorites()" title="Add to Favorites">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="video2.html" download="my-video.mp4" title="Download">
+                <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        function setQuality(videoUrl, quality) {
+            const currentTime = videoPlayer.currentTime;
+            const isPlaying = !videoPlayer.paused;
+
+            // Change the video source
+            videoPlayer.src = videoUrl;
+            videoPlayer.setAttribute('data-quality', quality);
+
+            // Resume playback at the same time position
+            videoPlayer.load();
+            videoPlayer.currentTime = currentTime;
+
+            if (isPlaying) {
+                videoPlayer.play();
+            }
+        }
+
+        function shareVideo() {
+            alert("Share functionality will be added here!");
+        }
+
+        function addToFavorites() {
+            alert("Added to Favorites!");
+        }
+    </script>
+</body>
+</html>

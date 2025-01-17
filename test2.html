@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming Gallery</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <h1>Video Streaming Gallery</h1>
+    <div class="gallery">
+        <!-- Thumbnails with data-video attribute linking to videos -->
+        <div class="thumbnail" data-video="video1.mp4">
+            <img src="thumbnail1.jpg" alt="Video 1">
+            <p>Video 1</p>
+        </div>
+        <div class="thumbnail" data-video="video2.mp4">
+            <img src="thumbnail2.jpg" alt="Video 2">
+            <p>Video 2</p>
+        </div>
+        <div class="thumbnail" data-video="video3.mp4">
+            <img src="thumbnail3.jpg" alt="Video 3">
+            <p>Video 3</p>
+        </div>
+    </div>
+
+    <!-- Modal for playing videos -->
+    <div class="modal" id="videoModal">
+        <span class="close">&times;</span>
+        <video controls id="videoPlayer">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

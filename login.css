@@ -1,0 +1,98 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page background */
+body, html {
+    height: 100%; /* Full page height */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-image: url('background.png');
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+    background-blend-mode: overlay; /* Blends the image with the overlay */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for login form */
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    color: white;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Input styling */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+/* Submit button styling */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Link styling */
+.login-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: #4CAF50; /* Green link */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;            /* Use flexbox for alignment */
+    justify-content: center;  /* Center the icons horizontally */
+    gap: 15px;                /* Add space between each icon */
+    margin-top: 20px;         /* Space above the social icons */
+}
+
+.social-icons svg {
+    cursor: pointer;         /* Make icons clickable */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+/* Optional: Add hover effect to icons */
+.social-icons svg:hover {
+    transform: scale(1.1);    /* Slightly enlarge on hover */
+}

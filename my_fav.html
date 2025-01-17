@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Items</title>
+  <link rel="stylesheet" href="my_fav.css">
+</head>
+<body>
+  <header>
+    <h1>My Favorite Items</h1>
+  </header>
+  
+  <main>
+    <section id="item-list">
+      <h2>All Items</h2>
+      <ul>
+        <li data-id="item1">
+          Item 1 <button class="mark-fav">Mark as Favorite</button>
+        </li>
+        <li data-id="item2">
+          Item 2 <button class="mark-fav">Mark as Favorite</button>
+        </li>
+        <li data-id="item3">
+          Item 3 <button class="mark-fav">Mark as Favorite</button>
+        </li>
+        <li data-id="item4">
+          Item 4 <button class="mark-fav">Mark as Favorite</button>
+        </li>
+      </ul>
+    </section>
+
+    <section id="favorites-list">
+      <h2>My Favorites</h2>
+      <ul id="fav-items"></ul>
+    </section>
+  </main>
+
+  <script src="my_fav.js"></script>
+</body>
+</html>
